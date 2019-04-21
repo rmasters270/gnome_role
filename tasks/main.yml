@@ -3,8 +3,8 @@
 - name: install gnome gui
   yum:
     name:
-      - @^GNOME Desktop
-      - @Graphical Administration Tools
+      - '@^GNOME Desktop'
+      - '@Graphical Administration Tools'
     state: present
   notify: reboot
 
