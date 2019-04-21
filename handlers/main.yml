@@ -1,0 +1,4 @@
+---
+# handlers file for gnome_role
+- name: reboot
+  command: shutdown -r now "GNOME Installed"

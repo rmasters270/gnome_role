@@ -1,0 +1,17 @@
+---
+# tasks file for gnome_role
+- name: install gnome gui
+  yum:
+    name:
+      - @^GNOME Desktop
+      - @Graphical Administration Tools
+    state: present
+  notify: reboot
+
+- name: link files for automatic startup
+  file:
+    src: /lib/systemd/system/runlevel5.target
+    dest: /etc/systemd/system/default.target
+    state: link
+    force: yes
+
